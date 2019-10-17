@@ -17,13 +17,13 @@ Prototype Refactor
 */
 class GameObject {
    constructor(attr) {
-      (this.createdAt = attr.createdAt),
-      (this.name = attr.name),
-      (this.dimensions = attr.dimensions);
+      this.createdAt = attr.createdAt,
+         this.name = attr.name,
+         this.dimensions = attr.dimensions;
    }
-   destroy(){
-   return `${this.name} was removed from the game.`;
-};
+   destroy() {
+      return `${this.name} was removed from the game.`;
+   };
 }
 
 
@@ -35,7 +35,7 @@ class GameObject {
   * should inherit destroy() from GameObject's prototype
 */
 
-class CharacterStats extends GameObject{
+class CharacterStats extends GameObject {
    constructor(attr) {
       super(attr);
       this.healthPoints = attr.healthPoints;
@@ -56,12 +56,12 @@ class CharacterStats extends GameObject{
   * should inherit destroy() from GameObject through CharacterStats
   * should inherit takeDamage() from CharacterStats
 */
-class Humanoid extends CharacterStats{
+class Humanoid extends CharacterStats {
    constructor(attr) {
       super(attr);
-      (this.team = attr.team),
-      (this.weapons = attr.weapons),
-      (this.language = attr.language);
+      this.team = attr.team,
+         this.weapons = attr.weapons,
+         this.language = attr.language;
 
    }
    greet() {
