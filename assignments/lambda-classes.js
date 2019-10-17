@@ -46,8 +46,7 @@ class Student extends Person {
       this.previousBackground = attr.previousBackground,
          this.className = attr.className,
          this.favSubjects = attr.favSubjects, 
-         this.grade = attr.grade,
-         this.projects = attr.projects
+         this.grade = attr.grade
    }
    listsSubjects(array) {
       array.forEach(element => {
@@ -89,7 +88,7 @@ const instructor1 = new Instructor({
    age: 45,
    specialty: 'React',
    favLanguage: 'Javascript',
-   catchPhrase: 'You only live once!'
+   catchPhrase: 'You only live once!',
 })
 
 let student1 = new Student({
@@ -98,7 +97,6 @@ let student1 = new Student({
    age: 20,
    previousBackground: 'Waitressing, HTML, CSS',
    className: 'WEB25',
-   projects: ["Web Design", "CSS Principles", "JavaScript Principles"],
    favSubjects: ['Math', 'Web Design', 'Biology'],
    grade: 0,
 })
@@ -109,22 +107,29 @@ const pm = new ProjectManager({
    location: 'Ireland',
    age: 32,
    gradClassName: 'WEB18',
-   favInstructor: 'Disco Steve'
+   favInstructor: 'Disco Stu'
 })
 
-let projectSelector = (student) => student.projects[Math.floor(Math.random() * student.projects.length)]
 
-// console.log(student1.readyToGraduate());
+let projects = ["Web Design", "CSS Principles", "JavaScript Principles"]
+let projectSelector = () => projects[Math.floor(Math.random() * projects.length)]
+
+
 // console.log(instructor1.gradeStudent(student1, "WEb design"));
+// console.log(instructor1.demo(projectSelector(instructor1.projects)));
+// console.log(instructor1.grade(student1, projectSelector()));
+// console.log(instructor1.speak());
+
+// console.log(pm.standUp('WEB25_tilly'));
+// console.log(pm.debugsCode(student1, projectSelector(student1)));
+// console.log(pm.speak());
+
+// console.log(student1.listsSubjects(student1.favSubjects));
+// console.log(student1.sprintChallenge(projectSelector(student1)));
 // console.log(student1.grade);
 // console.log(student1.readyToGraduate());
-// console.log(pm.debugsCode(student1, projectSelector(student1)));
-console.log(student1.listsSubjects(student1.favSubjects));
-// console.log();
-// console.log();
-// console.log();
-// console.log();
-// console.log();
+// console.log(student1.speak());
+
 // console.log();
 // console.log();
 // console.log();
