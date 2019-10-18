@@ -48,9 +48,9 @@ class Student extends Person {
          this.favSubjects = attr.favSubjects, 
          this.grade = attr.grade
    }
-   listsSubjects(array) {
-      array.forEach(element => {
-         console.log(element)
+   listsSubjects() {
+      this.favSubjects.forEach(value => {
+         console.log(value);
       });
    }
    PRAssignment(subject) {
@@ -91,7 +91,7 @@ const instructor1 = new Instructor({
    catchPhrase: 'You only live once!',
 })
 
-let student1 = new Student({
+const student1 = new Student({
    name: 'Holly Beckinsworth',
    location: 'Washington',
    age: 20,
@@ -115,17 +115,17 @@ let projects = ["Web Design", "CSS Principles", "JavaScript Principles"]
 let projectSelector = () => projects[Math.floor(Math.random() * projects.length)]
 
 
-// console.log(instructor1.gradeStudent(student1, "WEb design"));
-// console.log(instructor1.demo(projectSelector(instructor1.projects)));
+console.log(instructor1.gradeStudent(student1, projectSelector()));
+// console.log(instructor1.demo(projectSelector()));
 // console.log(instructor1.grade(student1, projectSelector()));
 // console.log(instructor1.speak());
 
 // console.log(pm.standUp('WEB25_tilly'));
-// console.log(pm.debugsCode(student1, projectSelector(student1)));
+// console.log(pm.debugsCode(student1, projectSelector()));
 // console.log(pm.speak());
 
-// console.log(student1.listsSubjects(student1.favSubjects));
-// console.log(student1.sprintChallenge(projectSelector(student1)));
+// student1.listsSubjects();
+// console.log(student1.sprintChallenge(projectSelector()));
 // console.log(student1.grade);
 // console.log(student1.readyToGraduate());
 // console.log(student1.speak());
